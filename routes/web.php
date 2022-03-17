@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pogoda', '\App\Http\Controllers\WeatherCityController@list');
+Route::get('/pogoda/{id}', '\App\Http\Controllers\WeatherCityController@show');
